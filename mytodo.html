@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link type= "text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type= "text/css" rel="stylesheet" href="./assets/style.css">
+
+
+</head>
+<body>
+    <div id="container">
+        <h1>ToDo List</h1>
+        <input type="text" placeholder="Write a To Do" v-model="title">
+        <button @click="addTodo" :value="{input:addTodo}">Add To Do</button>
+        <br>
+            <ul>
+                <li v-for = "todo in todos">
+                    <span>
+                        <i class="fa fa-trash-o" aria-hidden="true" @click="deleteTodo(todo)"></i>
+
+                    </span> 
+                    <span @click="todo.doneStyle=!todo.doneStyle" 
+                    :class="{done:todo.doneStyle}">{{todo.title}}</span>
+                </li>
+
+            </ul>
+
+    </div>
+
+
+    <script type= "text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type= "text/javascript" src="assets/script.js"></script>
+</body>
+</html>
