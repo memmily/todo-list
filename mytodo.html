@@ -24,8 +24,13 @@
                     </span> 
                     <span @click="todo.doneStyle=!todo.doneStyle" 
                     :class="{done:todo.doneStyle}">{{todo.title}}</span>
+                    
                 </li>
-
+                <br>
+                <button @click= "delCrossedTodos">Delete all <span class="done">done todos</span></button>
+                <br>
+                <br>
+                <button @click="delAllTodos">Delete all list</button>
             </ul>
 
     </div>

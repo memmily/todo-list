@@ -45,8 +45,6 @@ new Vue ({
 
 			var valueToRemove= todo.identifier;
 
-			//transform valueToRemopve in an integer
-
 			var notDone = [];
 
 			for (var i=0; i<this.todos.length; i++) {
@@ -63,10 +61,25 @@ new Vue ({
 			
 		},
 
-		logTodo: function(todo) {
+		delCrossedTodos: function() {
+			var notDone = [];
+			for (var i=0; i<this.todos.length; i++) {
+				if(this.todos[i].doneStyle === false) {
+					notDone.push(this.todos[i]);
+				}
+			}
 
-			console.log(todo);
+			this.todos = notDone;
+			
 
+		},
+
+		delAllTodos: function() {
+
+			var deleteAll = [];
+			if(this.todos) {
+				this.todos = deleteAll;
+			}
 		}
 
 	}
@@ -75,6 +88,4 @@ new Vue ({
 })
 
 
-//Add a external button to delete all todos (all the list): remove all todos and remove if they are complete;
 
-//pass in paramenters in a fuction
