@@ -1,4 +1,79 @@
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #2c3e50;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*CSS gradient from: https://uigradients.com/#BetweenNightandDay */
+
+}
+
+#container {
+	margin: 100px auto;
+	width: 360px;
+	color: white;
+	background-color: #F0F0F0;
+	
+	
+}
+
+h1 {
+	background-color:#707070;
+	margin: auto;
+	padding: 20px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+.writeTodo {
+
+	width: 60%;
+	margin-left: 32px;
+	margin-top: 20px;
+}
+
+
+.btn-outline-dark {
+	width: 30%;
+}
+
+
+.list-group-item {
+	color: black;
+}
+
+.fa-trash-o {
+float: right;
+}
+
+
 .done {
 	text-decoration: line-through;
 	opacity: 0.5;
 }
+
+
+.deleteDone {
+	margin-top: 20px;
+	margin-left: 20%;
+	margin-top: 40px;
+	width: 50%;
+	padding: 8px;
+	
+	
+}
+
+.deleteAll {
+	margin-left: 20%;
+	margin-bottom: 40px;
+	width: 50%;
+	padding: 8px;
+}
+
+
+/* btn delete  
+	background trash can when hover
+	add some space on input, between buttons and with container
+*/

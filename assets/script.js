@@ -49,11 +49,9 @@ new Vue ({
 
 			for (var i=0; i<this.todos.length; i++) {
 				currentTodo = this.todos[i];
-
 				if(currentTodo.identifier !== valueToRemove) {
 					notDone.push(this.todos[i]);
 				}
-				
 
 			}
 

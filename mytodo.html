@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link type= "text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link type= "text/css" rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
     <div id="container">
         <h1>ToDo List</h1>
-        <input type="text" placeholder="Write a To Do" v-model="title">
-        <button @click="addTodo" :value="{input:addTodo}">Add To Do</button>
+        <input class="writeTodo" type="text" placeholder="Write a To Do" v-model="title">
+        <button type="button" class="allButtons btn btn-outline-dark" @click="addTodo" :value="{input:addTodo}">Add To Do</button>
         <br>
-            <ul>
-                <li v-for = "todo in todos">
+        <br>
+            <ul class="list-group">
+                <li v-for = "todo in todos" class="list-group-item list-group-item-action">
                     <span>
                         <i class="fa fa-trash-o" aria-hidden="true" @click="deleteTodo(todo)"></i>
 
@@ -27,13 +30,16 @@
                     
                 </li>
                 <br>
-                <button @click= "delCrossedTodos">Delete all <span class="done">done todos</span></button>
+                <button type="button" class="deleteDone allButtons btn btn-outline-dark" @click= "delCrossedTodos">Delete all <span class="done">done todos</span></button>
                 <br>
                 <br>
-                <button @click="delAllTodos">Delete all list</button>
+                <button type="button" class="deleteAll allButtons btn btn-outline-dark" @click="delAllTodos">Delete all list</button>
             </ul>
 
     </div>
+
+
+
 
 
     <script type= "text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
