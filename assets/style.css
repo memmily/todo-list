@@ -63,7 +63,6 @@ h1 {
 	background-size: 40px;
 }
 
-
 .btn-outline-dark {
 	color: #303030;
 	border-color: #303030;
@@ -73,15 +72,9 @@ h1 {
 .btn-outline-dark:hover {
 	background-color:#303030;
 	color: #FFFF;
-	border-color: #303030;
 }
 
-.done {
-	text-decoration: line-through;
-	opacity: 0.5;
-}
-
-.done:hover {
+.done, .done:hover {
 	text-decoration: line-through;
 	opacity: 0.5;
 }
