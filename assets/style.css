@@ -57,12 +57,12 @@ h1 {
 
 .fa-trash-o {
 	float: right;
-	opacity: 0.5;
 	cursor: pointer;
+	opacity: 0.5;
 }
 
 .fa-trash-o:hover {
-	opacity: 1.0;
+	/* opacity: 1.0; */
 	background-size: 40px;
 	
 	}
@@ -87,5 +87,4 @@ h1 {
 .done:hover {
 	text-decoration: line-through;
 	opacity: 0.5;
-	color: #FFFF;
 }
