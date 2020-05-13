@@ -13,34 +13,32 @@
 
 </head>
 <body>
-    <div id="container">
+    <div id="container" class="container">
         <h1>ToDo List</h1>
-        <input class="writeTodo" type="text" placeholder="Write a To Do" v-model="title">
-        <button type="button" class="allButtons btn btn-outline-dark" @click="addTodo" :value="{input:addTodo}">Add To Do</button>
+
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Write a todo" aria-label="Write a todo" aria-describedby="button-addon4" v-model="title">
+            <div class="input-group-append" id="button-addon4">
+              <button class="btn btn-outline-secondary" type="button" @click="addTodo" :value="{input:addTodo}">Add</button>
+            </div>
+        </div>
         <br>
         <br>
             <ul class="list-group">
                 <li v-for = "todo in todos" class="list-group-item list-group-item-action">
                     <span>
                         <i class="fa fa-trash-o" aria-hidden="true" @click="deleteTodo(todo)"></i>
-
                     </span> 
                     <span @click="todo.doneStyle=!todo.doneStyle" 
                     :class="{done:todo.doneStyle}">{{todo.title}}</span>
                     
                 </li>
                 <br>
-                <button type="button" class="deleteDone allButtons btn btn-outline-dark" @click= "delCrossedTodos">Delete all <span class="done">done todos</span></button>
-                <br>
-                <br>
-                <button type="button" class="deleteAll allButtons btn btn-outline-dark" @click="delAllTodos">Delete all list</button>
+                    <button type="button" class="deleteDone allButtons btn btn-outline-primary" @click= "delCrossedTodos">Delete <span class="done">done todos</span></button>
+                    <button type="button" class="deleteAll allButtons btn btn-outline-primary" @click="delAllTodos">Delete all list</button>  
+
             </ul>
-
     </div>
-
-
-
-
 
     <script type= "text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type= "text/javascript" src="assets/script.js"></script>

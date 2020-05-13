@@ -11,69 +11,81 @@ body {
 #container {
 	margin: 100px auto;
 	width: 360px;
-	color: white;
 	background-color: #F0F0F0;
+	padding-left: 0;
+	padding-right: 0;
 	
 	
 }
 
 h1 {
-	background-color:#707070;
-	margin: auto;
+	background-color: #303030;
 	padding: 20px;
-	color: white;
+	color: #FFFF;
 	text-transform: uppercase;
 	text-align: center;
 }
 
-
-.writeTodo {
-
-	width: 60%;
-	margin-left: 32px;
-	margin-top: 20px;
+.list-group {
+	color: #303030;
 }
 
+.form-control {
 
-.btn-outline-dark {
-	width: 30%;
+	margin-left: 16px;
+	margin-top: 24px;
 }
 
+.btn-outline-secondary {
+	background-color: #FFFF;
+	color: #303030;
+	border-color: #303030;
+	height: calc(1.5em + .75rem + 2px);
+	margin-top: 24px;
+	margin-right: 16px;
+}
+
+.btn-outline-secondary:hover {
+	background-color: #303030;
+	color: #FFFF;
+	border-color: #303030;
+}
 
 .list-group-item {
 	color: black;
 }
 
 .fa-trash-o {
-float: right;
+	float: right;
+	opacity: 0.5;
+	cursor: pointer;
 }
 
+.fa-trash-o:hover {
+	opacity: 1.0;
+	background-size: 40px;
+	
+	}
+
+.btn-outline-primary {
+	color: #303030;
+	border-color: #303030;
+	margin: 16px;
+}
+
+.btn-outline-primary:hover {
+	background-color:#303030;
+	color: #FFFF;
+	border-color: #303030;
+}
 
 .done {
 	text-decoration: line-through;
 	opacity: 0.5;
 }
 
-
-.deleteDone {
-	margin-top: 20px;
-	margin-left: 20%;
-	margin-top: 40px;
-	width: 50%;
-	padding: 8px;
-	
-	
+.done:hover {
+	text-decoration: line-through;
+	opacity: 0.5;
+	color: #FFFF;
 }
-
-.deleteAll {
-	margin-left: 20%;
-	margin-bottom: 40px;
-	width: 50%;
-	padding: 8px;
-}
-
-
-/* btn delete  
-	background trash can when hover
-	add some space on input, between buttons and with container
-*/
