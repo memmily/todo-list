@@ -17,27 +17,27 @@
         <h1>ToDo List</h1>
 
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Write a todo" aria-label="Write a todo" aria-describedby="button-addon4" v-model="title">
+            <input type="text" class="form-control rounded" placeholder="Write a todo" aria-label="Write a todo" aria-describedby="button-addon4" v-model="title">
             <div class="input-group-append" id="button-addon4">
-              <button class="btn btn-outline-secondary" type="button" @click="addTodo" :value="{input:addTodo}">Add</button>
+              <button class="btn btn-outline-secondary rounded" type="button" @click="addTodo" :value="{input:addTodo}">Add</button>
             </div>
         </div>
         <br>
         <br>
-            <ul class="list-group">
-                <li v-for = "todo in todos" class="list-group-item list-group-item-action">
-                    <span>
-                        <i class="fa fa-trash-o" aria-hidden="true" @click="deleteTodo(todo)"></i>
-                    </span> 
-                    <span @click="todo.doneStyle=!todo.doneStyle" 
-                    :class="{done:todo.doneStyle}">{{todo.title}}</span>
-                    
-                </li>
-                <br>
-                    <button type="button" class="deleteDone allButtons btn btn-outline-primary" @click= "delCrossedTodos">Delete <span class="done">done todos</span></button>
-                    <button type="button" class="deleteAll allButtons btn btn-outline-primary" @click="delAllTodos">Delete all list</button>  
+        <ul class="list-group">
+            <li v-for = "todo in todos" class="list-group-item list-group-item-action">
+                <span>
+                    <i class="fa fa-trash-o" aria-hidden="true" @click="deleteTodo(todo)"></i>
+                </span> 
+                <span @click="todo.doneStyle=!todo.doneStyle" :class="{done:todo.doneStyle}">{{todo.title}}</span>
+            </li>
+            <br>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class=" btn btn-outline-dark rounded" @click= "delCrossedTodos">Delete <span class="done">done todos</span></button>
+                <button type="button" class="btn btn-outline-dark rounded" @click="delAllTodos">Delete all list</button>  
+            </div>
 
-            </ul>
+        </ul>
     </div>
 
     <script type= "text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

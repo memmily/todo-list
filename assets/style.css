@@ -5,7 +5,6 @@ body {
 	background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/*CSS gradient from: https://uigradients.com/#BetweenNightandDay */
-
 }
 
 #container {
@@ -14,8 +13,6 @@ body {
 	background-color: #F0F0F0;
 	padding-left: 0;
 	padding-right: 0;
-	
-	
 }
 
 h1 {
@@ -26,14 +23,14 @@ h1 {
 	text-align: center;
 }
 
-.list-group {
-	color: #303030;
-}
-
 .form-control {
-
+	margin-right: 8px;
 	margin-left: 16px;
 	margin-top: 24px;
+}
+
+.list-group {
+	color: #303030;
 }
 
 .btn-outline-secondary {
@@ -62,18 +59,18 @@ h1 {
 }
 
 .fa-trash-o:hover {
-	/* opacity: 1.0; */
+	opacity: 1.0;
 	background-size: 40px;
-	
-	}
+}
 
-.btn-outline-primary {
+
+.btn-outline-dark {
 	color: #303030;
 	border-color: #303030;
 	margin: 16px;
 }
 
-.btn-outline-primary:hover {
+.btn-outline-dark:hover {
 	background-color:#303030;
 	color: #FFFF;
 	border-color: #303030;

@@ -32,11 +32,21 @@ new Vue ({
 		addTodo: function() {
 
 
+			// var newTodo = this.title;
+
+			// this.todos.push({title: newTodo, doneStyle: false, identifier: this.nextId++ });
+
+			// this.title = '';
+
+
 			var newTodo = this.title;
 
-			this.todos.push({title: newTodo, doneStyle: false, identifier: this.nextId++ });
+			if(newTodo !== '') {
+				this.todos.push({title: newTodo, doneStyle: false, identifier: this.nextId++ });	
+			}
 
 			this.title = '';
+
 		}
 
 		,
