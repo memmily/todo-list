@@ -60,7 +60,7 @@ h1 {
 
 .fa-trash-o:hover {
 	opacity: 1.0;
-	background-size: 40px;
+	font-size: 25px;
 }
 
 .btn-outline-dark {
