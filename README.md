@@ -1,2 +1,2 @@
 # todo-list
-A todo list made with Vue.js
+A todo list made with Bootstrap and Vue.js
