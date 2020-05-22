@@ -10,6 +10,9 @@
     <link type= "text/css" rel="stylesheet" href="./assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+    <!-- onfocus
+Change the background-color of an input field when it gets focus. -->
+
 
 </head>
 <body>
@@ -25,11 +28,11 @@
         <br>
         <br>
         <ul class="list-group">
-            <li v-for = "todo in todos" class="list-group-item list-group-item-action">
+            <li v-for = "todo in todos" class="list-group-item list-group-item-action" @click="todo.doneStyle=!todo.doneStyle" :class="{done:todo.doneStyle}">
                 <span>
                     <i class="fa fa-trash-o" aria-hidden="true" @click="deleteTodo(todo)"></i>
                 </span> 
-                <span @click="todo.doneStyle=!todo.doneStyle" :class="{done:todo.doneStyle}">{{todo.title}}</span>
+                <span>{{todo.title}}</span>
             </li>
             <br>
             <div class="btn-group" role="group" aria-label="Basic example">
